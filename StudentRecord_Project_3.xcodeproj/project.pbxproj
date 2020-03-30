@@ -15,6 +15,8 @@
 		CBB114042432677200BB8245 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB114022432677200BB8245 /* LaunchScreen.storyboard */; };
 		CBB114362432766800BB8245 /* StudentRecord.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBB114342432766800BB8245 /* StudentRecord.xcdatamodeld */; };
 		CBB11439243279C400BB8245 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB11438243279C400BB8245 /* RoundedButton.swift */; };
+		CBB1143B243281DC00BB8245 /* StudentRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB1143A243281DC00BB8245 /* StudentRecordCell.swift */; };
+		CBB1143D2432826400BB8245 /* StudentsRecordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB1143C2432826400BB8245 /* StudentsRecordTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		CBB1140E243269E900BB8245 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CBB114352432766800BB8245 /* StudentRecord.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudentRecord.xcdatamodel; sourceTree = "<group>"; };
 		CBB11438243279C400BB8245 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		CBB1143A243281DC00BB8245 /* StudentRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRecordCell.swift; sourceTree = "<group>"; };
+		CBB1143C2432826400BB8245 /* StudentsRecordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsRecordTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				CBB113FB2432677000BB8245 /* ViewController.swift */,
+				CBB1143C2432826400BB8245 /* StudentsRecordTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -94,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				CBB113FD2432677000BB8245 /* Main.storyboard */,
+				CBB1143A243281DC00BB8245 /* StudentRecordCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,7 +201,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBB114362432766800BB8245 /* StudentRecord.xcdatamodeld in Sources */,
+				CBB1143D2432826400BB8245 /* StudentsRecordTableViewController.swift in Sources */,
 				CBB11439243279C400BB8245 /* RoundedButton.swift in Sources */,
+				CBB1143B243281DC00BB8245 /* StudentRecordCell.swift in Sources */,
 				CBB113FC2432677000BB8245 /* ViewController.swift in Sources */,
 				CBB113F82432677000BB8245 /* AppDelegate.swift in Sources */,
 				CBB113FA2432677000BB8245 /* SceneDelegate.swift in Sources */,
