@@ -13,6 +13,7 @@
 		CBB113FF2432677000BB8245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB113FD2432677000BB8245 /* Main.storyboard */; };
 		CBB114012432677200BB8245 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB114002432677200BB8245 /* Assets.xcassets */; };
 		CBB114042432677200BB8245 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB114022432677200BB8245 /* LaunchScreen.storyboard */; };
+		CBB114362432766800BB8245 /* StudentRecord.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBB114342432766800BB8245 /* StudentRecord.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		CBB114032432677200BB8245 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBB114052432677200BB8245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBB1140E243269E900BB8245 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CBB114352432766800BB8245 /* StudentRecord.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudentRecord.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		CBB113F62432677000BB8245 /* StudentRecord_Project_3 */ = {
 			isa = PBXGroup;
 			children = (
+				CBB114332432765300BB8245 /* Model */,
 				CBB1140B2432693800BB8245 /* Supporting Files */,
 				CBB1140C2432694800BB8245 /* Controller */,
 				CBB1140D2432695100BB8245 /* View */,
@@ -99,6 +102,14 @@
 				CBB1140E243269E900BB8245 /* README.md */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		CBB114332432765300BB8245 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CBB114342432766800BB8245 /* StudentRecord.xcdatamodeld */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBB114362432766800BB8245 /* StudentRecord.xcdatamodeld in Sources */,
 				CBB113FC2432677000BB8245 /* ViewController.swift in Sources */,
 				CBB113F82432677000BB8245 /* AppDelegate.swift in Sources */,
 				CBB113FA2432677000BB8245 /* SceneDelegate.swift in Sources */,
@@ -374,6 +386,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CBB114342432766800BB8245 /* StudentRecord.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CBB114352432766800BB8245 /* StudentRecord.xcdatamodel */,
+			);
+			currentVersion = CBB114352432766800BB8245 /* StudentRecord.xcdatamodel */;
+			path = StudentRecord.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CBB113EC2432677000BB8245 /* Project object */;
 }
