@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Segue Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StudentRecord_Project_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SegueController" customModule="StudentRecord_Project_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,6 +34,9 @@
                                                 <real key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="addRecordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nbB-1w-rl6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zlr-Of-hI0" customClass="RoundedButton" customModule="StudentRecord_Project_3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="76" width="200" height="50"/>
@@ -50,6 +53,9 @@
                                                 <real key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="searchRecordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bHn-KA-u7u"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uj-H8-fHz" customClass="RoundedButton" customModule="StudentRecord_Project_3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="152" width="200" height="50"/>
@@ -66,6 +72,9 @@
                                                 <real key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="viewAllRecordsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OcN-Ic-Fe8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -109,10 +118,10 @@
             </objects>
             <point key="canvasLocation" x="8.8000000000000007" y="115.59220389805098"/>
         </scene>
-        <!--View Controller-->
+        <!--Form View Controller-->
         <scene sceneID="bL8-4K-4Fk">
             <objects>
-                <viewController id="TnI-cL-nDl" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FormViewController" id="TnI-cL-nDl" customClass="FormViewController" customModule="StudentRecord_Project_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ehX-Ko-dz7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -208,10 +217,10 @@
             </objects>
             <point key="canvasLocation" x="736.79999999999995" y="115.59220389805098"/>
         </scene>
-        <!--Students Record Table View Controller-->
+        <!--Students Record View Controller-->
         <scene sceneID="NaI-Rh-Ibb">
             <objects>
-                <tableViewController id="frQ-Fo-U0E" customClass="StudentsRecordTableViewController" customModule="StudentRecord_Project_3" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="StudentsRecordViewController" id="frQ-Fo-U0E" customClass="StudentsRecordViewController" customModule="StudentRecord_Project_3" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5sZ-Rf-UN9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -9,21 +9,22 @@
 /* Begin PBXBuildFile section */
 		CBB113F82432677000BB8245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB113F72432677000BB8245 /* AppDelegate.swift */; };
 		CBB113FA2432677000BB8245 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB113F92432677000BB8245 /* SceneDelegate.swift */; };
-		CBB113FC2432677000BB8245 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB113FB2432677000BB8245 /* ViewController.swift */; };
+		CBB113FC2432677000BB8245 /* SegueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB113FB2432677000BB8245 /* SegueController.swift */; };
 		CBB113FF2432677000BB8245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB113FD2432677000BB8245 /* Main.storyboard */; };
 		CBB114012432677200BB8245 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB114002432677200BB8245 /* Assets.xcassets */; };
 		CBB114042432677200BB8245 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB114022432677200BB8245 /* LaunchScreen.storyboard */; };
 		CBB114362432766800BB8245 /* StudentRecord.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBB114342432766800BB8245 /* StudentRecord.xcdatamodeld */; };
 		CBB11439243279C400BB8245 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB11438243279C400BB8245 /* RoundedButton.swift */; };
 		CBB1143B243281DC00BB8245 /* StudentRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB1143A243281DC00BB8245 /* StudentRecordCell.swift */; };
-		CBB1143D2432826400BB8245 /* StudentsRecordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB1143C2432826400BB8245 /* StudentsRecordTableViewController.swift */; };
+		CBB1143D2432826400BB8245 /* StudentsRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB1143C2432826400BB8245 /* StudentsRecordViewController.swift */; };
+		CBB1143F243287C000BB8245 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB1143E243287C000BB8245 /* FormViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CBB113F42432677000BB8245 /* StudentRecord_Project_3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentRecord_Project_3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB113F72432677000BB8245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBB113F92432677000BB8245 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CBB113FB2432677000BB8245 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CBB113FB2432677000BB8245 /* SegueController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueController.swift; sourceTree = "<group>"; };
 		CBB113FE2432677000BB8245 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CBB114002432677200BB8245 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBB114032432677200BB8245 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,7 +33,8 @@
 		CBB114352432766800BB8245 /* StudentRecord.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudentRecord.xcdatamodel; sourceTree = "<group>"; };
 		CBB11438243279C400BB8245 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		CBB1143A243281DC00BB8245 /* StudentRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRecordCell.swift; sourceTree = "<group>"; };
-		CBB1143C2432826400BB8245 /* StudentsRecordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsRecordTableViewController.swift; sourceTree = "<group>"; };
+		CBB1143C2432826400BB8245 /* StudentsRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsRecordViewController.swift; sourceTree = "<group>"; };
+		CBB1143E243287C000BB8245 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +91,9 @@
 		CBB1140C2432694800BB8245 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CBB113FB2432677000BB8245 /* ViewController.swift */,
-				CBB1143C2432826400BB8245 /* StudentsRecordTableViewController.swift */,
+				CBB113FB2432677000BB8245 /* SegueController.swift */,
+				CBB1143E243287C000BB8245 /* FormViewController.swift */,
+				CBB1143C2432826400BB8245 /* StudentsRecordViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -201,11 +204,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBB114362432766800BB8245 /* StudentRecord.xcdatamodeld in Sources */,
-				CBB1143D2432826400BB8245 /* StudentsRecordTableViewController.swift in Sources */,
+				CBB1143D2432826400BB8245 /* StudentsRecordViewController.swift in Sources */,
 				CBB11439243279C400BB8245 /* RoundedButton.swift in Sources */,
 				CBB1143B243281DC00BB8245 /* StudentRecordCell.swift in Sources */,
-				CBB113FC2432677000BB8245 /* ViewController.swift in Sources */,
+				CBB113FC2432677000BB8245 /* SegueController.swift in Sources */,
 				CBB113F82432677000BB8245 /* AppDelegate.swift in Sources */,
+				CBB1143F243287C000BB8245 /* FormViewController.swift in Sources */,
 				CBB113FA2432677000BB8245 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
