@@ -24,6 +24,7 @@
 		CBB114002432677200BB8245 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBB114032432677200BB8245 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBB114052432677200BB8245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBB1140E243269E900BB8245 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +57,48 @@
 		CBB113F62432677000BB8245 /* StudentRecord_Project_3 */ = {
 			isa = PBXGroup;
 			children = (
-				CBB113F72432677000BB8245 /* AppDelegate.swift */,
-				CBB113F92432677000BB8245 /* SceneDelegate.swift */,
-				CBB113FB2432677000BB8245 /* ViewController.swift */,
-				CBB113FD2432677000BB8245 /* Main.storyboard */,
-				CBB114002432677200BB8245 /* Assets.xcassets */,
-				CBB114022432677200BB8245 /* LaunchScreen.storyboard */,
+				CBB1140B2432693800BB8245 /* Supporting Files */,
+				CBB1140C2432694800BB8245 /* Controller */,
+				CBB1140D2432695100BB8245 /* View */,
+				CBB1140F24326A0C00BB8245 /* Others */,
 				CBB114052432677200BB8245 /* Info.plist */,
 			);
 			path = StudentRecord_Project_3;
+			sourceTree = "<group>";
+		};
+		CBB1140B2432693800BB8245 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBB113F72432677000BB8245 /* AppDelegate.swift */,
+				CBB113F92432677000BB8245 /* SceneDelegate.swift */,
+				CBB114022432677200BB8245 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBB1140C2432694800BB8245 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CBB113FB2432677000BB8245 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CBB1140D2432695100BB8245 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CBB113FD2432677000BB8245 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CBB1140F24326A0C00BB8245 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				CBB114002432677200BB8245 /* Assets.xcassets */,
+				CBB1140E243269E900BB8245 /* README.md */,
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +321,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 646XC4LJ39;
 				INFOPLIST_FILE = StudentRecord_Project_3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +329,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.developers.StudentRecord-Project-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -305,6 +340,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 646XC4LJ39;
 				INFOPLIST_FILE = StudentRecord_Project_3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +348,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.developers.StudentRecord-Project-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
