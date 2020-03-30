@@ -36,6 +36,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="addRecordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nbB-1w-rl6"/>
+                                            <segue destination="TnI-cL-nDl" kind="show" id="GRv-fq-M6A"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zlr-Of-hI0" customClass="RoundedButton" customModule="StudentRecord_Project_3" customModuleProvider="target">
@@ -123,17 +124,17 @@
             <objects>
                 <viewController storyboardIdentifier="FormViewController" id="TnI-cL-nDl" customClass="FormViewController" customModule="StudentRecord_Project_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ehX-Ko-dz7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="osR-eT-NTN">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="443"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="423"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jka-T7-YTD">
-                                        <rect key="frame" x="140" y="0.0" width="95.5" height="144"/>
+                                        <rect key="frame" x="140" y="0.0" width="95.5" height="124"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Form" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPL-Nn-KkO">
-                                                <rect key="frame" x="0.0" y="0.0" width="95.5" height="144"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="95.5" height="124"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="40"/>
                                                 <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -141,7 +142,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZRg-RV-Ctp">
-                                        <rect key="frame" x="57.5" y="173" width="260" height="196"/>
+                                        <rect key="frame" x="57.5" y="153" width="260" height="196"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GA9-lu-Jyc">
                                                 <rect key="frame" x="0.0" y="0.0" width="260" height="34"/>
@@ -179,7 +180,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="svg-SN-OTe">
-                                        <rect key="frame" x="127.5" y="398" width="120" height="45"/>
+                                        <rect key="frame" x="127.5" y="378" width="120" height="45"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7f8-dN-ih4" customClass="RoundedButton" customModule="StudentRecord_Project_3" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="45"/>
@@ -197,6 +198,9 @@
                                                         <real key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="submitFormButtonTapped:" destination="TnI-cL-nDl" eventType="touchUpInside" id="tWc-oN-2DR"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -212,10 +216,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jPe-aD-F7g"/>
                     </view>
+                    <navigationItem key="navigationItem" id="9gZ-tW-kue"/>
+                    <connections>
+                        <outlet property="contactTextField" destination="zx0-GO-zIK" id="ueh-xu-KYm"/>
+                        <outlet property="fatherNameTextField" destination="cHu-5H-TkM" id="zMF-FI-cBZ"/>
+                        <outlet property="fullNameTextField" destination="GA9-lu-Jyc" id="0Zz-sG-uCk"/>
+                        <outlet property="rollNoTextField" destination="QUs-t6-OEn" id="09I-th-c6q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hU5-q2-aYu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="736.79999999999995" y="115.59220389805098"/>
+            <point key="canvasLocation" x="825" y="116"/>
         </scene>
         <!--Students Record View Controller-->
         <scene sceneID="NaI-Rh-Ibb">
@@ -226,11 +237,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" id="zLb-8g-nu8" customClass="StudentRecordCell" customModule="StudentRecord_Project_3" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="48" id="zLb-8g-nu8" customClass="StudentRecordCell" customModule="StudentRecord_Project_3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="48"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zLb-8g-nu8" id="9Sn-SL-QWZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -243,7 +254,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ces-4z-l7q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1472" y="118"/>
+            <point key="canvasLocation" x="1541.5999999999999" y="115.59220389805098"/>
         </scene>
     </scenes>
     <resources>

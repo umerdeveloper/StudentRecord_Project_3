@@ -11,8 +11,25 @@ import UIKit
 class FormViewController: UIViewController {
     
     
+    @IBOutlet weak var fullNameTextField: UITextField!
+    @IBOutlet weak var fatherNameTextField: UITextField!
+    @IBOutlet weak var rollNoTextField: UITextField!
+    @IBOutlet weak var contactTextField: UITextField!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+    
+    @IBAction func submitFormButtonTapped(_ sender: UIButton) {
+    }
+    
+    
+    
+    
+    
+    
 }
