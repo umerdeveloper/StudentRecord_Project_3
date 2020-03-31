@@ -27,24 +27,17 @@ class FormViewController: UIViewController {
     // MARK: - Supporting Properties
     private let emptyTextField: String = ""
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         fullNameTextField.becomeFirstResponder()
-       // initializeCoreData()
-
     }
     
     @IBAction func submitFormButtonTapped(_ sender: UIButton) {
         resignFirstResponder()
-        initializeCoreData()
-        
+        persistData()
     }
     
-    
-    func initializeCoreData() {
+    func persistData() {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
@@ -56,11 +49,9 @@ class FormViewController: UIViewController {
         // TODO: Save Data
         do { try context.save() }
         catch { showAlertToUser(message: "Failed to save data.") }
-        
     }
     
     func insertData(student: NSManagedObject) {
-
         if AreTextFieldsNill() {
             showAlertToUser(message: "All Fields Required.")
         } else {
