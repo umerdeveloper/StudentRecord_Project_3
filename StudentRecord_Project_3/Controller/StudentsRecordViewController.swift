@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class StudentsRecordViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+class StudentsRecordViewController: UITableViewController, NSFetchedResultsControllerDelegate, UISearchBarDelegate {
     
     // MARK: - UI Properties
     @IBOutlet weak var searchBar: UISearchBar!
@@ -27,6 +27,7 @@ class StudentsRecordViewController: UITableViewController, NSFetchedResultsContr
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeFetchedResultsController()
+        searchBar.delegate = self
     }
 
     // MARK: - Data Source and Delegate
@@ -106,6 +107,16 @@ extension StudentsRecordViewController {
 
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         self.tableView.endUpdates()
+    }
+    
+    // MARK: - SearchBar
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.searchBar.showsCancelButton = true
+    }
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
     }
 }
  
