@@ -9,7 +9,14 @@
 import UIKit
 
 class StudentRecordCell: UITableViewCell {
-
+    
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var studentNameLabel: UILabel!
+    @IBOutlet weak var fatherNameLabel: UILabel!
+    @IBOutlet weak var rollNoLabel: UILabel!
+    @IBOutlet weak var contactNoLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

@@ -9,6 +9,8 @@
 import UIKit
 
 class StudentsRecordViewController: UITableViewController {
+    
+    private let customCellID: String = "customCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
