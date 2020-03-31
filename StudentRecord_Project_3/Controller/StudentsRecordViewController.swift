@@ -42,10 +42,10 @@ class StudentsRecordViewController: UITableViewController, NSFetchedResultsContr
                fatalError("Attempt to configure cell without a managed object")
            }
         
-        cell.studentNameLabel.text = newStudent.name
-        cell.fatherNameLabel.text = newStudent.fatherName
-        cell.rollNoLabel.text = String(newStudent.rollNumber)
-        cell.contactNoLabel.text = String(newStudent.contactNumber)
+        cell.studentNameLabel.text = "Name: \(newStudent.name!)"
+        cell.fatherNameLabel.text = "Father's Name: \(newStudent.fatherName!)"
+        cell.rollNoLabel.text = "Roll No: \(String(newStudent.rollNumber))"
+        cell.contactNoLabel.text = "Contact No: \(String(newStudent.contactNumber))"
         return cell
     }
     
