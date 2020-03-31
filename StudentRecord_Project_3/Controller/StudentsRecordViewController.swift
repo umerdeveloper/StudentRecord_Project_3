@@ -11,20 +11,25 @@ import CoreData
 
 class StudentsRecordViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    // MARK: - UI Properties
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    // MARK: - Supporting Properties
+    private let customCellID: String = "customCell"
+    
+    // MARK: - CoreData Properties
     var fetchedResultsController: NSFetchedResultsController<Student>!
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     lazy var context = appDelegate.persistentContainer.viewContext
-    private let customCellID: String = "customCell"
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeFetchedResultsController()
-        
-        
     }
 
-    // MARK: - Table view data source
+    // MARK: - Data Source and Delegate
 
     override func numberOfSections(in tableView: UITableView) -> Int { return 1 }
 
@@ -41,7 +46,6 @@ class StudentsRecordViewController: UITableViewController, NSFetchedResultsContr
         guard let newStudent = self.fetchedResultsController?.object(at: indexPath) else {
                fatalError("Attempt to configure cell without a managed object")
            }
-        
         cell.studentNameLabel.text = "Name: \(newStudent.name!)"
         cell.fatherNameLabel.text = "Father's Name: \(newStudent.fatherName!)"
         cell.rollNoLabel.text = "Roll No: \(String(newStudent.rollNumber))"
@@ -78,6 +82,8 @@ class StudentsRecordViewController: UITableViewController, NSFetchedResultsContr
 }
 
 extension StudentsRecordViewController {
+    
+    // MARK: - Update UI
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         self.tableView.beginUpdates()
     }
@@ -102,3 +108,4 @@ extension StudentsRecordViewController {
         self.tableView.endUpdates()
     }
 }
+ 
