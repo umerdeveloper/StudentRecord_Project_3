@@ -14,20 +14,17 @@ class SegueController: UIViewController {
     
     // MARK: - Perform Segues
     @IBAction func addRecordButtonTapped(_ sender: UIButton) {
-        
         performSegue(withIdentifier: formVCSegueID, sender: nil)
         
         
     }
     
     @IBAction func searchRecordButtonTapped(_ sender: UIButton) {
-        
         performSegue(withIdentifier: recordsVCSegueID, sender: nil)
         
     }
     
     @IBAction func viewAllRecordsButtonTapped(_ sender: UIButton) {
-        
         performSegue(withIdentifier: recordsVCSegueID, sender: nil)
         
     }
