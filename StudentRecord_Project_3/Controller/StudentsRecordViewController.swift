@@ -51,6 +51,12 @@ class StudentsRecordViewController: UITableViewController, NSFetchedResultsContr
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
+        if editingStyle == .delete {
+            let fetchedResult = fetchedResultsController.object(at: indexPath)
+            context.delete(fetchedResult)
+            do { try context.save() }
+            catch { fatalError() }
+        }
     }
     
     
@@ -68,5 +74,31 @@ class StudentsRecordViewController: UITableViewController, NSFetchedResultsContr
         } catch {
             fatalError("Failed to initialize FetchedResultsController: \(error)")
         }
+    }
+}
+
+extension StudentsRecordViewController {
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        self.tableView.beginUpdates()
+    }
+
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+
+        switch type {
+        case .delete:
+            self.tableView.deleteRows(at: [indexPath! as IndexPath], with: .fade)
+            case .insert:
+            print("")
+            case .move:
+            print("")
+            case .update:
+            print("")
+            @unknown default:
+            fatalError()
+        }
+    }
+
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        self.tableView.endUpdates()
     }
 }
