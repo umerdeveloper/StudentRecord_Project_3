@@ -13,7 +13,7 @@
 		CBB113FF2432677000BB8245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB113FD2432677000BB8245 /* Main.storyboard */; };
 		CBB114012432677200BB8245 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB114002432677200BB8245 /* Assets.xcassets */; };
 		CBB114042432677200BB8245 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB114022432677200BB8245 /* LaunchScreen.storyboard */; };
-		CBB114362432766800BB8245 /* StudentRecord.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBB114342432766800BB8245 /* StudentRecord.xcdatamodeld */; };
+		CBB114362432766800BB8245 /* Student.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBB114342432766800BB8245 /* Student.xcdatamodeld */; };
 		CBB11439243279C400BB8245 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB11438243279C400BB8245 /* RoundedButton.swift */; };
 		CBB1143B243281DC00BB8245 /* StudentRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB1143A243281DC00BB8245 /* StudentRecordCell.swift */; };
 		CBB1143D2432826400BB8245 /* StudentsRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB1143C2432826400BB8245 /* StudentsRecordViewController.swift */; };
@@ -119,7 +119,7 @@
 		CBB114332432765300BB8245 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CBB114342432766800BB8245 /* StudentRecord.xcdatamodeld */,
+				CBB114342432766800BB8245 /* Student.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -203,7 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBB114362432766800BB8245 /* StudentRecord.xcdatamodeld in Sources */,
+				CBB114362432766800BB8245 /* Student.xcdatamodeld in Sources */,
 				CBB1143D2432826400BB8245 /* StudentsRecordViewController.swift in Sources */,
 				CBB11439243279C400BB8245 /* RoundedButton.swift in Sources */,
 				CBB1143B243281DC00BB8245 /* StudentRecordCell.swift in Sources */,
@@ -412,13 +412,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		CBB114342432766800BB8245 /* StudentRecord.xcdatamodeld */ = {
+		CBB114342432766800BB8245 /* Student.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				CBB114352432766800BB8245 /* StudentRecord.xcdatamodel */,
 			);
 			currentVersion = CBB114352432766800BB8245 /* StudentRecord.xcdatamodel */;
-			path = StudentRecord.xcdatamodeld;
+			path = Student.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
