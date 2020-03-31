@@ -20,7 +20,7 @@ class StudentsRecordViewController: UITableViewController, NSFetchedResultsContr
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeFetchedResultsController()
-        tableView.reloadData()
+        
         
     }
 
@@ -47,6 +47,10 @@ class StudentsRecordViewController: UITableViewController, NSFetchedResultsContr
         cell.rollNoLabel.text = "Roll No: \(String(newStudent.rollNumber))"
         cell.contactNoLabel.text = "Contact No: \(String(newStudent.contactNumber))"
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
     }
     
     
