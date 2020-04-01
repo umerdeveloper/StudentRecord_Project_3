@@ -9,7 +9,10 @@
 import UIKit
 import CoreData
 
-class StudentsRecordViewController: UITableViewController, NSFetchedResultsControllerDelegate, UISearchBarDelegate {
+class StudentsRecordViewController: UITableViewController, NSFetchedResultsControllerDelegate, UISearchBarDelegate, UISearchDisplayDelegate {
+    
+    var filteredStudent = [Student]()
+    var isSearching: Bool = false
     
     // MARK: - UI Properties
     @IBOutlet weak var searchBar: UISearchBar!
@@ -76,6 +79,7 @@ class StudentsRecordViewController: UITableViewController, NSFetchedResultsContr
         
         do {
             try fetchedResultsController.performFetch()
+            
         } catch {
             fatalError("Failed to initialize FetchedResultsController: \(error)")
         }
@@ -110,9 +114,16 @@ extension StudentsRecordViewController {
     }
     
     // MARK: - SearchBar
+    // TODO: - Shows cancle button
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         self.searchBar.showsCancelButton = true
     }
+    // TODO: - Enable Searching
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        if searchBar.text == "" { isSearching = false }
+        else { isSearching = true }
+    }
+    // TODO: - Clear SearchBar
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
         searchBar.text = ""
