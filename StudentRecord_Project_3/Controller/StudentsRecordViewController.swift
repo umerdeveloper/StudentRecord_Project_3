@@ -11,9 +11,6 @@ import CoreData
 
 class StudentsRecordViewController: UITableViewController, NSFetchedResultsControllerDelegate, UISearchBarDelegate, UISearchDisplayDelegate {
     
-    var filteredStudent = [Student]()
-    var isSearching: Bool = false
-    
     // MARK: - UI Properties
     @IBOutlet weak var searchBar: UISearchBar!
     
@@ -35,18 +32,20 @@ class StudentsRecordViewController: UITableViewController, NSFetchedResultsContr
 
     // MARK: - Data Source and Delegate
 
-    override func numberOfSections(in tableView: UITableView) -> Int { return 1 }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return fetchedResultsController.sections!.count }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let sections = fetchedResultsController.sections else {
             fatalError("No sections in fetchedResultsController")
         }
-        let sectionInfo = sections[section]
-        return sectionInfo.numberOfObjects
+        return sections[section].numberOfObjects
+        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCell(withIdentifier: customCellID, for: indexPath) as! StudentRecordCell
+        
         guard let newStudent = self.fetchedResultsController?.object(at: indexPath) else {
                fatalError("Attempt to configure cell without a managed object")
            }
@@ -118,16 +117,49 @@ extension StudentsRecordViewController {
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         self.searchBar.showsCancelButton = true
     }
-    // TODO: - Enable Searching
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        if searchBar.text == "" { isSearching = false }
-        else { isSearching = true }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text!.count > 0 {
+            filterData(text: searchBar.text!)
+        }
+        else {
+            initializeFetchedResultsController()
+            tableView.reloadData()
+        }
     }
+    
+    
+//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+//        filterData(text: searchBar.text!)
+//    }
+    
     // TODO: - Clear SearchBar
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
         searchBar.text = ""
         searchBar.resignFirstResponder()
+    }
+    
+    func filterData(text: String) {
+        
+        let request = NSFetchRequest<Student>(entityName: "Student")
+        let nameSort = NSSortDescriptor(key: "name", ascending: true)
+        request.sortDescriptors = [nameSort]
+        request.predicate = NSPredicate(format: "name CONTAINS %@", text)
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController.delegate = self
+        do {
+            try fetchedResultsController.performFetch()
+            tableView.reloadData()
+        }
+        catch { fatalError("Failed to initialize: \(error)") }
+    }
+    
+    // MARK: - AlertController
+    func showAlertToUser(message: String) {
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(action)
+        present(alert, animated: true)
     }
 }
  
